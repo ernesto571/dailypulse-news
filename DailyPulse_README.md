@@ -64,11 +64,11 @@ cd dailypulse-news
 #### 2. Install dependencies
 ```bash
 # Backend
-cd server
+cd backend
 npm install
 
 # Frontend
-cd ../client
+cd ../frontend
 npm install
 ```
 
@@ -78,6 +78,7 @@ npm install
 ```
 PORT=5001
 MONGO_URI=your_mongo_connection_string
+NODE_ENV=development
 JWT_SECRET=your_secret_key
 NEWS_API_KEY=your_newsapi_key
 FRONTEND_URL=http://localhost:5173
@@ -85,24 +86,17 @@ GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
 ```
 
-**Frontend (.env):**
-```
-VITE_API_BASE_URL=http://localhost:5001/api
-```
-
----
-
 ### ▶️ Run the app
 
 #### Backend:
 ```bash
-cd server
+cd backend
 npm run dev
 ```
 
 #### Frontend:
 ```bash
-cd client
+cd frontend
 npm run dev
 ```
 
@@ -126,20 +120,24 @@ Remember to:
 ```
 dailypulse-news/
 │
-├── server/
+├── backend/
+│   └── config/
 │   ├── controllers/
 │   ├── middleware/
 │   ├── models/
 │   ├── routes/
 │   ├── lib/
-│   └── index.js
+│   └── src/
+│   └── .env
 │
-├── client/
+├── frontend/
 │   ├── src/
 │   │   ├── components/
-│   │   ├── pages/
-│   │   ├── store/
+│   │   ├── contexts/
 │   │   ├── lib/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── store/
 │   │   └── App.jsx
 │   └── vite.config.js
 │
@@ -174,4 +172,4 @@ dailypulse-news/
 ## 🧑‍💻 Author
 **Emmanuel Cruz**  
 Full-stack Developer  
-[GitHub](https://github.com/yourusername) | [LinkedIn](https://linkedin.com/in/yourprofile)
+[GitHub](https://github.com/ernesto571 ) | [LinkedIn](https://linkedin.com/in/yourprofile)
